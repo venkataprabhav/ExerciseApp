@@ -10,6 +10,8 @@ A map is present where a user can see where locations of Gyms are.
 
 A 'notes' page is also included where one can note down potential reminders for themselves. 
 
+
+
 ### Dashboard Page
 
 ![image](https://github.com/venkataprabhav/ExerciseApp/assets/123014399/e634d400-2ac7-4495-a27c-8c3e97a268c0)
