@@ -1,0 +1,14 @@
+﻿global using CommunityToolkit.Maui;
+global using _6002CEM_BohdanYermakov.Models;
+global using _6002CEM_BohdanYermakov.Services;
+global using CommunityToolkit.Mvvm.ComponentModel;
+global using CommunityToolkit.Mvvm.Input;
+global using _6002CEM_BohdanYermakov.ViewModels;
+global using _6002CEM_BohdanYermakov.Views;
+global using System.Collections.ObjectModel;
+global using System.ComponentModel;
+global using System.Diagnostics;
+global using System.Globalization;
+global using System.Runtime.CompilerServices;
+global using System.Text.Json;
+global using System.Threading.Tasks;

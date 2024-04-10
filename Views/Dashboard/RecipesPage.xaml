@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:_6002CEM_BohdanYermakov.ViewModels"
+             xmlns:m="clr-namespace:_6002CEM_BohdanYermakov.Models"
+             x:Class="_6002CEM_BohdanYermakov.Views.RecipesPage"
+             x:DataType="vm:RecipesViewModel">
+
+    <ContentPage.BindingContext>
+        <vm:RecipesViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <CollectionView ItemsSource="{Binding Recipes}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="m:Recipe">
+                    <Frame Margin="10" Padding="5" BackgroundColor="LightGray" CornerRadius="10">
+                        <VerticalStackLayout Spacing="10">
+                            <Image Aspect="AspectFill"
+                               Source="{Binding ImageSource}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ScrollView>
+</ContentPage>

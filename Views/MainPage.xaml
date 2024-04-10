@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:vm="clr-namespace:_6002CEM_BohdanYermakov.ViewModels"
+			 x:Class="_6002CEM_BohdanYermakov.Views.MainPage"
+			 x:DataType="vm:MainViewModel">
+
+    <VerticalStackLayout
+    Spacing="25"
+    Padding="30,0"
+    VerticalOptions="Center">
+
+        <Image
+                                    Source="fitness_mobile_app_logo_black.png"      
+                                    HeightRequest="150"
+                                    Aspect="AspectFit"
+                                   SemanticProperties.Description="logo of the ftness mobile app" />
+        
+        <VerticalStackLayout Spacing="1">
+            
+            <Label Text="Login to your Account!" FontSize="27" TextColor="LightCoral" HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+
+        
+
+        <StackLayout Orientation="Horizontal">
+            <Frame HeightRequest="45" Margin="20,0,0,0" Padding="0" HasShadow="True" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding Email}" TextColor="Black" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="E-mail" Keyboard="Email"/>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Frame HeightRequest="45" Margin="20,0,0,0" Padding="0" HasShadow="True" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding Password}" TextColor="Black"  Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True"/>
+            </Frame>
+        </StackLayout>
+
+        <Button Text="Sign In" BackgroundColor="LightCoral" HorizontalOptions="Center" WidthRequest="100" Command="{Binding LoginCommand}"/>
+        <!--https://www.youtube.com/watch?v=GOFYE6sGWUY
+            https://www.youtube.com/watch?v=z4_EQ2wM6No
+            https://www.youtube.com/watch?v=0JlAkQI12Hk
+            https://www.youtube.com/watch?v=dWnGoZY3XiE
+        - I used this video as an inspiration for Login Page-->
+        
+        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
+            <Label Text="Don't have an account?"/>
+        </StackLayout>
+        <StackLayout>
+            <Button Text="Register" TextColor="Blue" BackgroundColor="LightCoral" HorizontalOptions="Center" Command="{Binding GoRegisterCommand}"/>
+        </StackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>

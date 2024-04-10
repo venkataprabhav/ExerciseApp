@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:_6002CEM_BohdanYermakov.ViewModels"
+             xmlns:m="clr-namespace:_6002CEM_BohdanYermakov.Models"
+             x:Class="_6002CEM_BohdanYermakov.Views.ExercisesPage"
+             x:DataType="vm:ExercisesViewModel">
+
+    <ContentPage.BindingContext>
+        <vm:ExercisesViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <CollectionView ItemsSource="{Binding Exercises}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="m:Exercise">
+                    <Frame Margin="10" Padding="5" BackgroundColor="DarkBlue" CornerRadius="10">
+                        <VerticalStackLayout Spacing="10">
+                            <Image Aspect="AspectFill"
+                                   Source="{Binding ImageSource}"
+                                   HeightRequest="265"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand"/>
+                            <Label Text="{Binding Name}" 
+                                   FontAttributes="Bold"
+                                   FontSize="Medium"
+                                   HorizontalOptions="Center"/>
+                            <Label Text="{Binding Reps}"
+                                   FontSize="Small"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Center"/>
+                            <Label Text="{Binding Description}"
+                                   FontSize="Small"
+                                   HorizontalTextAlignment="Center"
+                                   Padding="10"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ScrollView>
+</ContentPage>

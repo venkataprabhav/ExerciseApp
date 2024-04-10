@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:vm="clr-namespace:_6002CEM_BohdanYermakov.ViewModels"
+			 x:Class="_6002CEM_BohdanYermakov.Views.RegisterPage"
+			 x:DataType="vm:RegisterViewModel">
+
+    <VerticalStackLayout
+    Spacing="25"
+    Padding="30,0"
+    VerticalOptions="Center">
+
+
+        <VerticalStackLayout Spacing="10">
+            <Label Text="Create your Account!" FontSize="25" TextColor="LightCoral" HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Frame HeightRequest="45" Margin="20,0,0,0" Padding="0" HasShadow="True" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding Email}" TextColor="Blue" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="E-mail" Keyboard="Email"/>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Frame HeightRequest="45" Margin="20,0,0,0" Padding="0" HasShadow="True" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding Password}" TextColor="Blue"  Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True"/>
+            </Frame>
+        </StackLayout>
+
+        <Button Text="Register" BackgroundColor="LightCoral" HorizontalOptions="Center" WidthRequest="100" Command="{Binding RegisterCommand}" />
+
+        <!--https://www.youtube.com/watch?v=GOFYE6sGWUY
+            https://www.youtube.com/watch?v=z4_EQ2wM6No
+            https://www.youtube.com/watch?v=0JlAkQI12Hk
+            https://www.youtube.com/watch?v=dWnGoZY3XiE
+        - I used this video as an inspiration for Register Page-->
+
+
+    </VerticalStackLayout>
+
+
+</ContentPage>

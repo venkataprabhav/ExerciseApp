@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+	x:Class="_6002CEM_BohdanYermakov.AppShell"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:views="clr-namespace:_6002CEM_BohdanYermakov.Views"
+    xmlns:vm="clr-namespace:_6002CEM_BohdanYermakov.ViewModels"
+    xmlns:dashboard="clr-namespace:_6002CEM_BohdanYermakov.Views.Dashboard"
+	xmlns:local="clr-namespace:_6002CEM_BohdanYermakov"
+    Shell.BackgroundColor="MidnightBlue"
+    Shell.TitleColor="White"
+    Shell.TabBarIsVisible="False">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <Label FontSize="Medium" Text="                           " HorizontalTextAlignment="Center"></Label>
+            <Image Source="fitness_mobile_app_logo_black.png" WidthRequest="160" ></Image>
+            <Label FontSize="Medium" Text="The best fitness app in the world!" HorizontalTextAlignment="Center"></Label>
+            <Label FontSize="Medium" Text="                           " HorizontalTextAlignment="Center"></Label>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+
+            <Grid Padding="5" ColumnDefinitions="10" RowDefinitions="65" RowSpacing="10" ColumnSpacing="5">
+                <HorizontalStackLayout Grid.Row="0" Spacing="10">
+                    <Image Source="{Binding FlyoutIcon}" WidthRequest="60" HeightRequest="60"></Image>
+                    <Label Text="{Binding Title}"  FontSize="15" Grid.Column="1" VerticalTextAlignment="Center"></Label>
+                </HorizontalStackLayout>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <ShellContent
+    FlyoutItemIsVisible="False"
+    Shell.FlyoutBehavior="Disabled"
+	Title="Main"
+	ContentTemplate="{DataTemplate views:MainPage}"
+	Route="MainPage" />
+
+    <ShellContent
+    FlyoutItemIsVisible="False"
+    Shell.FlyoutBehavior="Disabled"
+	ContentTemplate="{DataTemplate views:RegisterPage}"
+	Route="RegisterPage" />
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+			Shell.NavBarIsVisible="true"
+			Title="Dashboard" Icon="dashboard_page_logo.png" Route="DashboardPage"
+			ContentTemplate="{DataTemplate dashboard:DashboardPage}"/>
+        <ShellContent
+            Shell.NavBarIsVisible="true"
+			Title="Classes"
+			Icon="classes_page_logo.png"
+			ContentTemplate="{DataTemplate views:ClassesPage}"
+			Route="ClassesPage" />
+        <ShellContent
+			Shell.NavBarIsVisible="true"
+			Title="Exercises"
+			Icon="exercices_page_logo.png"
+			ContentTemplate="{DataTemplate views:ExercisesPage}"
+			Route="ExercisesPage" />
+        <ShellContent
+			Shell.NavBarIsVisible="true"
+			Title="Recipes"
+			Icon="recipes_page_logo.png"
+			ContentTemplate="{DataTemplate views:RecipesPage}"
+			Route="RecipesPage" />
+        <ShellContent
+			Shell.NavBarIsVisible="true"
+			Title="Notes"
+			Icon="notes_page_logo.png"
+			ContentTemplate="{DataTemplate views:NotesPage}"
+			Route="NotesPage" />
+        <ShellContent
+			Shell.NavBarIsVisible="true"
+			Title="Find the Nearest Gym"
+			Icon="maps_page_logo.png"
+			ContentTemplate="{DataTemplate views:LocationsPage}"
+			Route="LocationsPage" />
+    </FlyoutItem>
+    <Shell.FlyoutFooter>
+        <StackLayout Padding="100">
+            <Button Text="Sign Out" Command="{Binding SignOutCommand}"/>
+        </StackLayout>
+    </Shell.FlyoutFooter>
+</Shell>
