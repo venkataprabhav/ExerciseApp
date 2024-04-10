@@ -1,6 +1,7 @@
 # ExerciseApp
 An Exercise Mobile App made using C#, Xamarin - .NET MAUI
 
+This Mobile Application runs on Microsoft Visual Studio
 
 Users can login and register with their email.
 Account details of users are stored in a database.
