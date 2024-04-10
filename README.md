@@ -3,14 +3,12 @@ An Exercise Mobile App made using C#, Xamarin - .NET MAUI
 
 This Mobile Application runs on Microsoft Visual Studio
 
-Users can login and register with their email.
-Account details of users are stored in a database.
-
+Users can login and register with their email. Account details of users are stored in a database.
 The app contains a Exercises, Classes and Recipes where one can browse the different types of Exercises, Classes and Recipies respectively.
 A map is present where a user can see where locations of Gyms are.
-
 A 'notes' page is also included where one can note down potential reminders for themselves. 
 
+Please have a look at the images below to see the application.
 
 
 ### Dashboard Page
